@@ -143,7 +143,7 @@ class Env(tk.Tk):
             reward = 250
             done = False
         else:
-            reward = 100
+            reward = 50
             done = False
 
         next_state = self.coords_to_state(next_state)
