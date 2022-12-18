@@ -15,6 +15,7 @@ class QLearningAgent:
     # <s, a, r, s'> 샘플로부터 큐함수 업데이트
     def learn(self, state, action, reward, next_state):
         state, next_state = str(state), str(next_state)
+        print(state.shape())
         q_1 = self.q_table[state][action]
         # 벨만 최적 방정식을 사용한 큐함수의 업데이트
         q_2 = reward + self.discount_factor * max(self.q_table[next_state])
